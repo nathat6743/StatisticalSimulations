@@ -26,8 +26,6 @@ def update(frame, bars, cumulative_rolls,num_rolls,num_frames):
     # Calculate cumulative frequencies
     cumulative_rolls.extend(new_rolls)
     values, counts = calculate_frequencies(cumulative_rolls)
-    print(counts)
-    print(values)
     for bar, count in zip(bars, counts):
         bar.set_height(count)
 
